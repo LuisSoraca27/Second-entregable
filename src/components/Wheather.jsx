@@ -28,12 +28,13 @@ const Wheather = () => {
 
  const changeTemp = () => {
   setIsCelsius(!isCelsius)
-  if(isCelsius) {
-    setWeatherTemp((weatherTemp * 1.8) + 32)
-  } else {
-    setWeatherTemp((weatherTemp - 32) / 1.8)
-  }
 
+  if(isCelsius) {
+    setWeatherTemp(Math.round((weatherTemp * 1.8) + 32))
+  } else {
+    setWeatherTemp(Math.round((weatherTemp - 32) / 1.8))
+  }
+  
  }
 
   return (
